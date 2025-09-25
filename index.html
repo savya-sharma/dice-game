@@ -47,24 +47,24 @@
 
 <body class="bg-gray-50 min-h-screen">
 
-    <!-- Landing Page (Page 1) -->
+    <!-- Page1 -->
     <div class="page1 active flex items-center justify-center">
         <div class="container mx-auto px-4 py-8">
-            <div class="flex items-center justify-center h-full">
+            <div class="flex flex-col md:flex-row items-center justify-center h-full">
                 <!-- left side -->
-                <div class="w-1/2 flex justify-center items-center">
+                <div class="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
                     <div class="relative">
                         <div>
-                            <img src="https://dice-game-aditya.vercel.app/images/dices.png" alt="">
+                            <img src="https://dice-game-aditya.vercel.app/images/dices.png" alt="" class="w-48 sm:w-64 md:w-80 lg:w-[28rem] max-w-full h-auto">
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- right side -->
-                <div class="w-1/2 flex flex-col items-center justify-center">
-                    <h1 class="text-8xl font-bold text-black mb-8 tracking-wider">DICE GAME</h1>
+                <div class="w-full md:w-1/2 flex flex-col items-center justify-center">
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-black mb-8 tracking-wider text-center">DICE GAME</h1>
                     <button id="playNowBtn"
-                        class="w-48 px-12 py-3 bg-black text-white font-medium rounded border-[1px] border-black transition-colors">
+                        class="w-40 sm:w-48 px-8 sm:px-12 py-3 bg-black text-white font-medium rounded border-[1px] border-black transition-colors text-base sm:text-lg">
                         Play Now
                     </button>
                 </div>
@@ -75,60 +75,60 @@
 
 
 
-    <!-- Game Page (Page 2) -->
+    <!-- Page2 -->
     <div class="page2 w-full min-h-screen flex flex-col justify-start pt-20">
         <div class="container mx-auto px-4 py-8 h-full">
             <!-- Top Section: Score and Number Selection -->
-            <div class="flex justify-between items-start mb-16">
-                <div class="sc-ts">
-                    <div class="ttsr text-8xl font-bold text-black mb-2">0</div>
-                    <div class="text-xl font-medium text-black">Total Score</div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start items-center mb-10 md:mb-16 gap-8 md:gap-0">
+                <div class="sc-ts flex flex-col items-center md:items-start">
+                    <div class="ttsr text-5xl sm:text-7xl md:text-8xl font-bold text-black mb-2">0</div>
+                    <div class="text-lg sm:text-xl font-medium text-black">Total Score</div>
                 </div>
 
-                <div class="nm-bxs">
-                    <div class="error-msg bg-red-600 p-2 rounded-[2px] mb-1">
-                        <h3 class="text-[1.3vw] text-white">Please select a number before rolling the dice!</h3>
+                <div class="nm-bxs w-full md:w-auto flex flex-col items-center md:items-end">
+                    <div class="error-msg bg-red-600 p-2 rounded-[2px] mb-1 w-full md:w-auto">
+                        <h3 class="text-base sm:text-lg md:text-[1.3vw] text-white text-center md:text-right">Please select a number before rolling the dice!</h3>
                     </div>
-                    <div class="flex gap-4 mb-4">
+                    <div class="flex flex-wrap justify-center md:justify-end gap-2 sm:gap-4 mb-4">
                         <div
-                            class="nm-btns w-16 h-16 border-[1px] border-black flex items-center justify-center text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            class="nm-btns w-12 h-12 sm:w-16 sm:h-16 border-[1px] border-black flex items-center justify-center text-lg sm:text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
                             1</div>
                         <div
-                            class="nm-btns w-16 h-16 border-[1px] border-black flex items-center justify-center text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            class="nm-btns w-12 h-12 sm:w-16 sm:h-16 border-[1px] border-black flex items-center justify-center text-lg sm:text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
                             2</div>
                         <div
-                            class="nm-btns w-16 h-16 border-[1px] border-black flex items-center justify-center text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            class="nm-btns w-12 h-12 sm:w-16 sm:h-16 border-[1px] border-black flex items-center justify-center text-lg sm:text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
                             3</div>
                         <div
-                            class="nm-btns w-16 h-16 border-[1px] border-black flex items-center justify-center text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            class="nm-btns w-12 h-12 sm:w-16 sm:h-16 border-[1px] border-black flex items-center justify-center text-lg sm:text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
                             4</div>
                         <div
-                            class="nm-btns w-16 h-16 border-[1px] border-black flex items-center justify-center text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            class="nm-btns w-12 h-12 sm:w-16 sm:h-16 border-[1px] border-black flex items-center justify-center text-lg sm:text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
                             5</div>
                         <div
-                            class="nm-btns w-16 h-16 border-[1px] border-black flex items-center justify-center text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            class="nm-btns w-12 h-12 sm:w-16 sm:h-16 border-[1px] border-black flex items-center justify-center text-lg sm:text-xl font-semibold cursor-pointer hover:bg-black hover:text-white transition-colors">
                             6</div>
                     </div>
-                    <div class="text-xl font-medium text-black text-right">Select Number</div>
+                    <div class="text-lg sm:text-xl font-medium text-black text-center md:text-right">Select Number</div>
                 </div>
             </div>
 
             <!-- Center Section: Dice -->
-            <div class="flex flex-col items-center mb-16">
-                <div class="dices">
-                    <img class="diceImg" src="" alt="">
+            <div class="flex flex-col items-center mb-10 sm:mb-16">
+                <div class="dices mb-4">
+                    <img class="diceImg w-24 sm:w-32 md:w-40 lg:w-48 h-auto" src="" alt="">
                 </div>
-                <div class="text-xl font-medium text-black">Click on Dice to Roll</div>
+                <div class="text-lg sm:text-xl font-medium text-black text-center">Click on Dice to Roll</div>
             </div>
 
             <!-- Bottom Section: Buttons -->
-            <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-col sm:flex-col items-center justify-center gap-4">
                 <button
-                    class="resetBtn w-48  px-12 py-3 border-[1px] border-black bg-white text-black font-medium rounded transition-colors">
+                    class="resetBtn w-40 sm:w-48 px-8 sm:px-12 py-3 border-[1px] border-black bg-white text-black font-medium rounded transition-colors">
                     Reset
                 </button>
                 <button
-                    class="showRulesBtn w-48 px-12 py-3 bg-black text-white font-medium rounded border-[1px] border-black transition-colors">
+                    class="showRulesBtn w-40 sm:w-48 px-8 sm:px-12 py-3 bg-black text-white font-medium rounded border-[1px] border-black transition-colors">
                     Show Rules
                 </button>
             </div>

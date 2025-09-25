@@ -58,7 +58,6 @@ let images = [
 
 
 let selectedNum = undefined;
-let hasSelected = false;
 
 nmbtns.forEach((nmbtn) => {
     nmbtn.addEventListener("click", function () {
@@ -70,8 +69,6 @@ nmbtns.forEach((nmbtn) => {
         });
         nmbtn.classList.add("bg-black", "text-white");
         gsap.to(nmbtn, { backgroundColor: "#000", color: "#fff", duration: 0.2 });
-        errormsg.style.display = "none";
-        hasSelected = true; // Mark as selected
     });
 });
 
@@ -91,7 +88,7 @@ dice.addEventListener("click", function () {
     console.log(randomNum);
 
     if (diceImg) {
-        gsap.to(diceImg, {
+        gsap.to(diceImg, {  
             rotate: 684,
             duration: 0.5,
             ease: "power2.inOut",
@@ -109,7 +106,7 @@ dice.addEventListener("click", function () {
         score.innerText = Number(score.innerText) - 5;
     }
     errormsg.style.display = "none";
-    hasSelected = false;
+
     nmbtns.forEach(btn => btn.classList.remove("bg-black", "text-white"));
     selectedNum = undefined;
 });
